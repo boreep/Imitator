@@ -1,4 +1,14 @@
-# 0.环境配置
+
+---
+###    Todo List
+- [x] 基于`imitator`所给出的`Lift`任务的训练和仿真环境部署，离线训练次数90000 
+- [ ] 基于`robomimic`原始数据集全流程训练和部署
+    - [x]`Can`任务数据集转换，转换为`imitator`可使用格式
+    - [ ] `Can`训练和部署
+---
+
+
+## 0.环境配置
 
 0.1创建虚拟conda环境
 
@@ -18,7 +28,7 @@
     cd /path/to/imitator
     pip install -e ".[torch]" -i https://mirrors.aliyun.com/pypi/simple/
 
-# 一.RoboMimic_dataset处理
+### 一.RoboMimic_dataset处理
 
 ___
 
@@ -71,7 +81,7 @@ ps.可从获取到的图像数据集合经过`playback_dataset.py`直接获取�
 
 ---
 
-## 2.查看数据集信息
+#### 查看数据集信息
 
 （metadata）借助robosuite创建环境` get_dataset_info.py `查看hdf5数据集元信息
 
@@ -81,7 +91,7 @@ ps.可从获取到的图像数据集合经过`playback_dataset.py`直接获取�
 
 ---
 
-# 二.RoboMimic_dataset处理
+### 二.RoboMimic_dataset处理
 
 1.对获取到的带图像信息的`robomimic`数据集进行处理，生成符合lerobot格式的`lerobot_dataset`。
 
@@ -106,8 +116,10 @@ ps.可从获取到的图像数据集合经过`playback_dataset.py`直接获取�
 
     python imitator/scripts/lerobot_trainer.py hydra.job.name=lerobot_test    device=cuda    env=robomimic    dataset_repo_id=data/lerobot_dataset   policy=diffusion   training.eval_freq=-1 wandb.enable=false root=/home/ghb/hxd/imitator/lerobot_test hydra.run.dir=/home/ghb/hxd/imitator/outputs/train/2024-11-11/03-53-38_robomimic_diffusion_lerobot_test resume=true
 
-# 三.`imitator`基于转换后数据集部署
+### 三.`imitator`基于转换后数据集部署
 
 1.`test_sim_env.py`测试仿真环境能否正确运行，可有屏幕渲染或无屏幕渲染
 
 2.部署并保存视频`test_lerobot_rollout.py`（目前仅用于diffusion policy）
+
+
