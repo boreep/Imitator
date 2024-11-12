@@ -8,11 +8,10 @@
 # if __name__ == "__main__":
 #     env = RoboMimicEnv(
 #         env_name="Can",
-#         render_mode="rgb_array",
+#         render_mode="human",
 #         **{
-#             "has_renderer": False,
-#             "has_offscreen_renderer": True,
-#         },
+#             "has_renderer": True,
+##         },
 #     )
 
 #     obs, info = env.reset()
