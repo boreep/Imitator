@@ -8,12 +8,13 @@
 
 ---
 
-0.2安装相应版本的[pytorch](https://pytorch.org/)
+0.2安装**相应版本**的[pytorch](https://pytorch.org/)
 
     conda install pytorch torchvision torchaudio pytorch-cuda=12.1 -c pytorch -c nvidia
 
 0.3下载并解压`imitator`  
 
+    git clone https://github.com/boreep/Imitator.git -b hxd_branch1112
     cd /path/to/imitator
     pip install -e ".[torch]" -i https://mirrors.aliyun.com/pypi/simple/
 
