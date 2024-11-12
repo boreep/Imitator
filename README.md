@@ -28,6 +28,7 @@
     cd /path/to/imitator
     pip install -e ".[torch]" -i https://mirrors.aliyun.com/pypi/simple/
 
+
 ### 一.RoboMimic_dataset处理
 
 ___
