@@ -33,6 +33,9 @@ if sys.version_info < (3, 9):  # for python <3.9
     ]
 else:  # for python >=3.9
     install_requires = [
+        "robosuite",#仿真
+        "minari",#用于d4rl数据集
+        "gymnasium-robotics",#仿真
         "numpy>=1.24.0,<2.0.0",
         "scipy>=1.13.0",
         "opencv-python>=4.9.0",
@@ -42,9 +45,6 @@ else:  # for python >=3.9
         "gymnasium>=0.29.1",
         "cmake>=3.29.0.1",
         "absl-py",
-        "robosuite",#仿真
-        "minari",#用于d4rl数据集
-        "gymnasium-robotics",#仿真
         "Pillow",
         "ml-collections",
         "plotly",
