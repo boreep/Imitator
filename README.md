@@ -1,6 +1,7 @@
 # 0.环境配置
 
 0.1创建虚拟conda环境
+
     conda create -y -n hxd_lerobot python=3.10
 
     conda activate lerobot
