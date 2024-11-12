@@ -1,0 +1,27 @@
+obs:
+  head_image:
+    modality: "ImageModality"
+    dim: [112, 112, 3]
+    camera: "primary"
+  eye_in_hand_image:
+    modality: "ImageModality"
+    dim: [112, 112, 3]
+    camera: "wrist"
+  robot_eef_pos:
+    modality: "FloatVectorModality"
+    dim: 3
+  robot_eef_rpy:
+    modality: "FloatVectorModality"
+    dim: 3
+  robot_gripper_pos:
+    modality: "FloatVectorModality"
+    dim: 1
+
+actions:
+  type: "action_trajectory"
+  modality: "FloatVectorModality"
+  dim: 7 # x,y,z,roll,pitch,yaw,grasp
+  history: 2
+  horizon: 4
+task:
+  language_instruction: "Pick up the object"

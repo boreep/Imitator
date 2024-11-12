@@ -1,0 +1,15 @@
+# @package _global_
+
+fps: 10
+
+env:
+  name: ros_robot_real
+  task: Dummy
+  image_size: 112
+  state_dim: 9
+  action_dim: 7
+  fps: ${fps}
+  episode_length: 100
+  gym:
+    obs_type: pixels_agent_pos
+    render_mode: rgb_array
