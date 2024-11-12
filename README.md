@@ -55,11 +55,8 @@ Using dense rewards
     birdview
     sideview
     agentview
-    
     robot0_eye_in_hand
     robot0_robotview
-    
-    
     }
 
 Only writing done at the end of the trajectory
@@ -109,8 +106,8 @@ ps.可从获取到的图像数据集合经过`playback_dataset.py`直接获取�
 
     python imitator/scripts/lerobot_trainer.py hydra.job.name=lerobot_test    device=cuda    env=robomimic    dataset_repo_id=data/lerobot_dataset   policy=diffusion   training.eval_freq=-1 wandb.enable=false root=/home/ghb/hxd/imitator/lerobot_test hydra.run.dir=/home/ghb/hxd/imitator/outputs/train/2024-11-11/03-53-38_robomimic_diffusion_lerobot_test resume=true
 
-# 三.`imitator`基于转换后数据集进行推理
+# 三.`imitator`基于转换后数据集部署
 
-1.仿真环境无屏幕渲染，保存视频`test_sim_env.py`
+1.`test_sim_env.py`测试仿真环境能否正确运行，可有屏幕渲染或无屏幕渲染
 
-2.部署并保存
+2.部署并保存视频`test_lerobot_rollout.py`（目前仅用于diffusion policy）
