@@ -33,7 +33,7 @@
 
 ___
 
-1.准备数据集：下载仿真数据集文件。准备数据集low_dim或非low_dim（二者内容量无区别，都不含观测图像，需通过仿真生成）
+1.准备数据集：[下载仿真数据集文件](https://robomimic.github.io/docs/datasets/robomimic_v0.1.html)。准备数据集low_dim或非low_dim（二者内容量无区别，都不含观测图像，需通过仿真生成）
 
 **2.获取图像数据集：通过`dataset_states_to_obs.py`相关脚本可从原始low_dim数据集中经过模拟器获得带图像信息的数据集(hdf5)。**
 
