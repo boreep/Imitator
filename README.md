@@ -26,7 +26,8 @@
 
     git clone https://github.com/boreep/Imitator.git -b hxd_branch1112
     cd /path/to/imitator
-    pip install -e ".[torch]" -i https://mirrors.aliyun.com/pypi/simple/
+    pip install -e ".[torch]" 
+    #-i https://mirrors.aliyun.com/pypi/simple/
 
 
 ### 一.RoboMimic_dataset处理
